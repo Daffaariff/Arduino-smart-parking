@@ -101,6 +101,7 @@ void loop() {
       flag3 = 1;
       if (flag4 == 0) {
         tone(bz2, NOTE_C1, 1000);
+        digitalWrite(led2, HIGH);  
         myservo2.write(-180);
         slot = slot + 1;
       }
@@ -116,6 +117,7 @@ void loop() {
     flag4 = 1;
     if (flag3 == 0) {
       noTone(bz2);
+      digitalWrite(led2, LOW);  
       myservo2.write(-180);  // sets the servo at 180 degree position
     }
     delay(4000);
